@@ -342,8 +342,7 @@ if auswahl:
         )
 
         produktkarte(haupt)
-        if übergabe.ist_aktie:
-            st.markdown(f"<p style='font-size: 150%;'>Zielpreis 1y:  {übergabe.goal:.2f} {übergabe.währung}</p>", unsafe_allow_html=True)
+       
 
 
     if alternativen:
