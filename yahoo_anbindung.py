@@ -15,6 +15,7 @@ class get_data:
         quote = self.suche.quotes[0]
         self.ticker = quote['symbol']
         self.ist_aktie = quote.get("quoteType") in ("EQUITY", "STOCK")
+        self.ist_etf= quote.get("quoteType") in("ETF", "ETP", "FUND")
         self.ist_derivat = quote.get("quoteType") in ("OPTION", "FUTURE", "FUTURES")
         self.aktie = yf.Ticker(self.ticker)
 
